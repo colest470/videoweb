@@ -78,7 +78,7 @@ const TestimonialsManager: React.FC = () => {
   };
 
   const deleteTestimonial = async (id: number) => {
-    const backendPort = 7865;
+    // const backendPort = 7865;
     const url = `https://elkay-backend.onrender.com/DELETE/testimonial/${id}`;
     try {
       const response = await fetch(url, {

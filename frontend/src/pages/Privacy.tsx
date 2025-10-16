@@ -3,7 +3,7 @@ import Container from '../components/ui/Container';
 
 const PrivacyPolicy: React.FC = () => {
   const websiteName = "Elkay Cinematics"; 
-  const contactEmail = "contact@creativestudio.com"; 
+  const contactEmail = "kimeulucas198@gmail.com"; 
   const effectiveDate = "May 30, 2025";
   const governingJurisdiction = "Kenya";
 

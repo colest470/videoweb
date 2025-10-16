@@ -78,11 +78,11 @@ const PortfolioManager: React.FC = () => {
     const formData = new FormData();
     formData.append('file', file);
     formData.append('upload_preset', 'videoweb');
-    formData.append("cloud_name", "djzgpzcio"); 
+    formData.append("cloud_name", "dzf8fcvop");
 
     try {
       const response = await fetch(
-        `https://api.cloudinary.com/v1_1/djzgpzcio/image/upload`, {
+        `https://api.cloudinary.com/v1_1/dzf8fcvop/image/upload`, {
           method: 'POST',
           body: formData,
         }

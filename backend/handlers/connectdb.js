@@ -2,15 +2,11 @@ import mongoose from "mongoose";
 import "dotenv/config";
 
 const videowebDB = mongoose.createConnection(process.env.MONGO_URI, {
-  dbName: "videoweb",
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+  dbName: "videoweb"
 });
 
 const portfolioDB = mongoose.createConnection(process.env.MONGO_URI, {
-  dbName: "Videowe2",
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+  dbName: "Videowe2"
 });
 
 export { videowebDB, portfolioDB };

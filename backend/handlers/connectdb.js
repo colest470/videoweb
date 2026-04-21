@@ -1,16 +1,25 @@
 import mongoose from "mongoose";
 import "dotenv/config";
 
-const videowebDB = mongoose.createConnection(process.env.MONGO_URI, {
-  dbName: "videoweb"
+const uri = process.env.MONGO_URI;
+if (!uri) {
+  throw new Error("MONGO_URI is not defined in environment variables.");
+}
+
+const videowebDB = mongoose.createConnection(uri, {
+  dbName: "videoweb",
 });
 
-const portfolioDB = mongoose.createConnection(process.env.MONGO_URI, {
-  dbName: "Videowe2"
+const portfolioDB = mongoose.createConnection(uri, {
+  dbName: "Videowe2",
 });
+
+videowebDB.on("connected", () => console.log("videowebDB connected."));
+videowebDB.on("error", (err) => console.error("videowebDB connection error:", err));
+portfolioDB.on("connected", () => console.log("portfolioDB connected."));
+portfolioDB.on("error", (err) => console.error("portfolioDB connection error:", err));
 
 export { videowebDB, portfolioDB };
-
 
 // import mongoose from 'mongoose';
 

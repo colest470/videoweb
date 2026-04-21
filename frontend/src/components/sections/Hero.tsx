@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
-import bigPic from "../../../public/IMG_20250408_215927.jpg"
 
 const Hero: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -28,7 +27,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-black/70 z-10" />
         <img 
-          src={bigPic} 
+          src="/IMG_20250408_215927.jpg"
           alt="Studio setup" 
           className="w-full h-full object-cover"
         />

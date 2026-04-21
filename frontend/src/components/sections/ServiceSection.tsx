@@ -40,7 +40,7 @@ const ServiceSection: React.FC = () => {
         'Architectural Shots',
         'Creative Concepts'
       ],
-      imageUrl: 'https://images.pexels.com/photos/1092364/pexels-photo-1092364.jpeg'
+      imageUrl: '/IMG-20250319-WA0039.jpg'
     },
     {
       icon: <PenTool className="h-8 w-8 text-purple-600" />,

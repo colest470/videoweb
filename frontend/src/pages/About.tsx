@@ -1,8 +1,6 @@
 import React from 'react';
 import { Award, Users, Target, Clock } from 'lucide-react';
 import Container from '../components/ui/Container';
-import luca from "../../public/IMG-20250319-WA0039.jpg";
-import mark from "../../public/WhatsApp Image 2025-06-09 at 9.53.59 AM.jpeg"
 
 interface TeamMember {
   name: string;
@@ -17,13 +15,13 @@ const About: React.FC = () => {
       name: 'Lucas Kimeu',
       role: 'Creator - Elkay Cinematics',
       bio: 'With years of experience in visual storytelling, Lucas leads our creative team with a passion for innovative content that drives results. Sh specializes in commercial and editorial photography.',
-      imageUrl: luca
+      imageUrl: "/IMG-20250319-WA0039.jpg"
     },
     {
       name: 'Mark Tom',
       role: 'Software  developer',
       bio: 'Through countless hours of brainstorming, designing, coding, and refining, our team worked hand-in-hand to breathe life into this website, each contribution a reflection of shared passion, skill, and purpose.',
-      imageUrl: mark
+      imageUrl: "/WhatsApp Image 2025-06-09 at 9.53.59 AM.jpeg"
     }
   ];
 

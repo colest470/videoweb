@@ -9,14 +9,29 @@ import handleRoot from "./handlers/handlRoot.js";
 import handlePortfolio from "./handlers/handlePortfolio.js";
 import handleGetPort from "./handlers/handleGetPort.js";
 import handleDeleteTest from "./handlers/handleDeleteTest.js";
+import helmet from "helmet"
+import rateLimit from "express-rate-limit"
 
 const app = express();
 const port = process.env.PORT || 5687;
 
+app.use(helmet())
+
 app.use(express.json());
 
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: "Too many requests from this IP, please try again after 15 minutes"
+});
+
+app.use(limiter);
+
 app.use(cors({
-  origin: process.env.FRONTEND_PORT
+  origin: "https://videoweb.onrender.com/",
+  optionsSuccessStatus: 200
 }));
 
 app.get("/", handleRoot);

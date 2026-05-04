@@ -32,7 +32,7 @@ const PortfolioManager: React.FC = () => {
   React.useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch('https://elkay-backend.onrender.com/portfolio');
+        const response = await fetch('http://elkay-backend.onrender.com/portfolio');
 
         if (!response.ok) {
           throw new Error('Failed to fetch portfolio items');

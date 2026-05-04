@@ -30,8 +30,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use(cors({
-  origin: "https://videoweb.onrender.com/",
-  optionsSuccessStatus: 200
+  origin: "https://videoweb.onrender.com/"
 }));
 
 app.get("/", handleRoot);
